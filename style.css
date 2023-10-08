@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   margin-top:80px;
+    display: flex;
+    justify-content: center;
+    background-color: #151320;
+    min-width: 100vh;
+
+
+}
+
+.caixa{
+position: relative;
+width:500px ;
+height: 500px;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items:center;
+border-radius: 3px;
+}
+.caixa::before, .caixa::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(110% - 30px);
+    height: calc(110% - 30px);
+    background: linear-gradient(45deg, #ffff00,#00ff00,#0099ff,#001aff,#a200ff,#ff0055,#ff0000,#ffff00,#00ff00,#0099ff,#001aff,#a200ff);
+    background-size: 300%;
+    border-radius: 8px;
+    animation: AnimarBorda 8s linear alternate infinite;
+}
+
+
+
+.caixa::after{
+filter:blur(50px) ;
+
+}
+
+@keyframes AnimarBorda {
+    0%{
+background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+
+header,main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+     position:relative;
+    display:inline-block;
+    margin:20px;
+    background-color: rgb(253, 0, 0);
+    color: aliceblue;
+   
+}
+
+  
